@@ -16,7 +16,6 @@
     "prepare": "husky install"
   },
   "prettier": "@daotl/prettier-config",
-
   "devDependencies": {
     "@daotl/eslint-config": "^0.1.2",
     "@daotl/tsconfig": "^0.0.4",
