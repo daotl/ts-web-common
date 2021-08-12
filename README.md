@@ -32,3 +32,8 @@ To publish to npm:
 ```shell
 npm run pub
 ```
+
+To debug with `ts-node`:
+```shell
+ts-node -r tsconfig-paths/register src/index.ts
+```
