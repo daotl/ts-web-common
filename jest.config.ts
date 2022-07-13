@@ -6,7 +6,7 @@
 export default {
   // A preset that is used as a base for Jest's configuration
   preset: 'ts-jest',
-  
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -26,7 +26,7 @@ export default {
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -34,7 +34,7 @@ export default {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -192,4 +192,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}
