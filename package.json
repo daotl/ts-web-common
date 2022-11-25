@@ -31,13 +31,21 @@
     "pub": "npm run lint && npm run test && npm run build && npm publish --access public",
     "prepare": "husky install"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "prettier": "@daotl/prettier-config",
   "devDependencies": {
     "@anatine/esbuild-decorators": "^0.2.19",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@daotl/eslint-config": "^0.3.32",
     "@daotl/tsconfig": "^0.1.2",
     "@types/jest": "29.2.3",
     "@types/node": "^18.11.9",
+    "commitizen": "^4.2.5",
     "esbuild": "^0.15.15",
     "eslint": "^8.28.0",
     "jest": "^29.3.1",
