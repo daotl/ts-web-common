@@ -1,8 +1,9 @@
 {
   "name": "@daotl/ts-lib-starter",
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "type": "module",
   "private": true,
-  "packageManager": "pnpm@7.17.0",
+  "packageManager": "pnpm@7.18.0",
   "description": "TypeScript Library Starter for DAOT projects",
   "author": "Nex Zhu <hitnexup@gmail.com>",
   "license": "MIT",
@@ -18,8 +19,8 @@
     "TypeScript",
     "library"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
