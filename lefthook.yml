@@ -1,8 +1,8 @@
 pre-commit:
   commands:
-    eslint:
+    rome:
       glob: '*'
-      run: npx eslint --cache --fix {staged_files} && git add {staged_files}
+      run: echo {staged_files} | tr ' ' '\n' | grep \\.[cm]\\?[jt]s$ | tr '\n' ' ' | xargs -i sh -c 'echo npx rome format --write {} && npx rome check --apply {}' && git add {staged_files}
 
 commit-msg:
   commands:
