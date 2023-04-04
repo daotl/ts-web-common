@@ -1,7 +1,7 @@
 {
   "name": "@daotl/web-common",
-  "version": "0.1.0",
-  "description": "Common code for Node.js web projects",
+  "version": "0.0.1",
+  "description": "Common code for JavaScript/TypeScript web projects",
   "type": "module",
   "packageManager": "pnpm@8.0.0",
   "author": "Nex Zhu <hitnexup@gmail.com>",
@@ -14,11 +14,16 @@
   "bugs": {
     "url": "https://github.com/daotl/nodejs-web-common/issues"
   },
-  "keywords": ["TypeScript", "library"],
+  "keywords": [
+    "TypeScript",
+    "library"
+  ],
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/**/*.ts",
     "test": "jest",
@@ -27,6 +32,28 @@
     "gen-rome-json": "gen-rome-json",
     "pub": "npm run lint && npm run test && npm run build && npm publish --access public"
   },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./_cjs/index.cjs"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      },
+      "require": {
+        "types": "./dist/*.d.ts",
+        "default": "./_cjs/*.cjs"
+      }
+    }
+  },
   "devDependencies": {
     "@anatine/esbuild-decorators": "^0.2.19",
     "@commitlint/cli": "^17.5.1",
@@ -34,6 +61,7 @@
     "@daotl/rome-config": "0.0.1-alpha.4",
     "@daotl/tsconfig": "^0.1.2",
     "@swc/core": "^1.3.42",
+    "@trpc/server": "^10.18.0",
     "@types/jest": "29.5.0",
     "@types/node": "^18.15.11",
     "esbuild": "^0.17.14",
@@ -45,6 +73,13 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.2"
+    "type-fest": "^3.7.2",
+    "typescript": "^5.0.2",
+    "zod": "^3.21.4"
+  },
+  "dependencies": {
+    "remeda": "^1.9.4",
+    "ts-custom-error": "^3.3.1",
+    "typed-case": "^1.0.2"
   }
 }

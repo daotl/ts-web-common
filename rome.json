@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/rome/configuration_schema.json",
   "files": {
-    "ignore": ["./dist/*"]
+    "ignore": ["./dist"]
   },
   "linter": {
     "rules": {
@@ -44,6 +44,7 @@
     "formatter": {
       "quoteStyle": "single",
       "semicolons": "asNeeded"
-    }
+    },
+    "globals": ["ErrorOptions"]
   }
 }
