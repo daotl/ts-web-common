@@ -4,7 +4,8 @@ import { CustomError } from 'ts-custom-error'
 import type { CamelCase, Class } from 'type-fest'
 import { toCamelCase } from 'typed-case'
 
-export function isStringer(x: unknown): x is { toString(): string } {
+// rome-ignore lint/suspicious/noExplicitAny: <explanation>
+export function isStringer(x: any): x is { toString(): string } {
   return x['toString'] instanceof Function
 }
 
