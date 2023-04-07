@@ -1,6 +1,6 @@
 {
   "name": "@daotl/web-common",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "Common code for JavaScript/TypeScript web projects",
   "type": "module",
   "packageManager": "pnpm@8.0.0",
@@ -25,12 +25,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig.lib.json",
+    "build": "rimraf dist tsconfig.tsbuildinfo && tsc -p tsconfig.lib.json && tsc-alias",
     "test": "jest",
     "lint": "rome format . && rome check .",
     "lint:fix": "rome format --write . && rome check --apply .",
     "gen-rome-json": "gen-rome-json",
-    "pub": "npm run lint && npm run test && npm run build && npm publish --access public"
+    "pub": "npm run lint && npm run build && npm publish --access public"
   },
   "exports": {
     ".": {
@@ -79,6 +79,7 @@
     "rome": "^12.0.0",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.5",
     "tsconfig-paths": "^4.2.0",
     "tsup": "^6.7.0",
     "type-fest": "^3.7.2",
