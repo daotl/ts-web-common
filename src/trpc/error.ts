@@ -2,7 +2,7 @@ import { TRPCError } from '@trpc/server'
 import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc'
 import * as R from 'remeda'
 
-import { type ErrorName, errors, isErr, toError } from '~/error.js'
+import { type ErrorName, errors, isErr, toError } from '~/error/index.js'
 
 export function trpcErrorFromError(
   e: Error,
