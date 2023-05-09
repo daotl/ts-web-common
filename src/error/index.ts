@@ -153,14 +153,14 @@ export class ErrForbidden extends Err {
 }
 
 // 403 Server failed to authenticate the request. Make sure the authentication information is correct.
-export class AuthenticationFailed extends ErrForbidden {
+export class ErrAuthenticationFailed extends ErrForbidden {
   static override code = 'AuthenticationFailed'
   static override defaultMessage =
     'Server failed to authenticate the request. Make sure the authentication information is correct'
 }
 
 // 403 The account being accessed does not have sufficient permissions to execute this operation.
-export class InsufficientAccountPermissions extends ErrForbidden {
+export class ErrInsufficientAccountPermissions extends ErrForbidden {
   static override code = 'InsufficientAccountPermissions'
   static override defaultMessage =
     'The account being accessed does not have sufficient permissions to execute this operation'
@@ -290,6 +290,8 @@ export const classes = {
   AlreadyLoggedIn: ErrAlreadyLoggedIn,
   InvalidAuthenticationInfo: ErrInvalidAuthenticationInfo,
   Forbidden: ErrForbidden,
+  AuthenticationFailed: ErrAuthenticationFailed,
+  InsufficientAccountPermissions: ErrInsufficientAccountPermissions,
   NotFound: ErrNotFound,
   EndpointNotFound: ErrEndpointNotFound,
   ResourceNotFound: ErrResourceNotFound,

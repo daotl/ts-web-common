@@ -1,6 +1,6 @@
 {
   "name": "@daotl/web-common",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Common code for JavaScript/TypeScript web projects",
   "type": "module",
   "packageManager": "pnpm@8.0.0",
