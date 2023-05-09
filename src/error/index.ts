@@ -279,7 +279,7 @@ export class ErrServerBusy extends ErrServiceUnavailable {
     'The server is currently unable to receive requests. Please retry your request'
 }
 
-export const classes = {
+export const Errors = {
   BadRequest: ErrBadRequest,
   BadArgument: ErrBadArgument,
   InvalidInput: ErrInvalidInput,
@@ -309,15 +309,45 @@ export const classes = {
   ServerBusy: ErrServerBusy,
 } as const
 
-export type Name = keyof typeof classes
+export namespace Errors {
+  export type BadRequest = ErrBadRequest
+  export type BadArgument = ErrBadArgument
+  export type InvalidInput = ErrInvalidInput
+  export type InvalidOperation = ErrInvalidOperation
+  export type PasswordTooWeak = ErrPasswordTooWeak
+  export type Unauthorized = ErrUnauthorized
+  export type InvalidLoginCredential = ErrInvalidLoginCredential
+  export type AlreadyLoggedIn = ErrAlreadyLoggedIn
+  export type InvalidAuthenticationInfo = ErrInvalidAuthenticationInfo
+  export type Forbidden = ErrForbidden
+  export type AuthenticationFailed = ErrAuthenticationFailed
+  export type InsufficientAccountPermissions = ErrInsufficientAccountPermissions
+  export type NotFound = ErrNotFound
+  export type EndpointNotFound = ErrEndpointNotFound
+  export type ResourceNotFound = ErrResourceNotFound
+  export type MethodNotSupported = ErrMethodNotSupported
+  export type Timeout = ErrTimeout
+  export type Conflict = ErrConflict
+  export type ResourceAlreadyExists = ErrResourceAlreadyExists
+  export type AccountAlreadyExists = ErrAccountAlreadyExists
+  export type PreconditionFailed = ErrPreconditionFailed
+  export type PayloadTooLarge = ErrPayloadTooLarge
+  export type TooManyRequests = ErrTooManyRequests
+  export type ClientClosedRequest = ErrClientClosedRequest
+  export type InternalError = ErrInternalError
+  export type ServiceUnavailable = ErrServiceUnavailable
+  export type ServerBusy = ErrServerBusy
+}
+
+export type Name = keyof typeof Errors
 
 export const errors = {
   ...(R.pipe(
-    classes,
+    Errors,
     R.mapKeys(toCamelCase<Name, {}>),
     R.mapValues((Cls) => new Cls()),
   ) as {
-    [K in Name as CamelCase<K>]: InstanceType<typeof classes[K]>
+    [K in Name as CamelCase<K>]: InstanceType<typeof Errors[K]>
   }),
 
   impossibleCodePath: errImpossibleCodePath,
