@@ -33,13 +33,18 @@
     "gen-rome-json": "gen-rome-json",
     "pub": "npm run lint && npm run test && npm run build && npm publish --access public"
   },
+  "resolutions": {
+    "load-tsconfig": "^0.2.5"
+  },
   "devDependencies": {
     "@anatine/esbuild-decorators": "^0.2.19",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@daotl/rome-config": "0.0.1-alpha.4",
-    "@daotl/tsconfig": "^0.1.2",
     "@swc/core": "^1.3.62",
+    "@tsconfig/esm": "^1.0.3",
+    "@tsconfig/node20": "^1.0.1",
+    "@tsconfig/strictest": "^2.0.1",
     "@types/jest": "29.5.2",
     "@types/node": "^20.3.0",
     "esbuild": "^0.18.1",

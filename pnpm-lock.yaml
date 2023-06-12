@@ -1,5 +1,8 @@
 lockfileVersion: '6.0'
 
+overrides:
+  load-tsconfig: ^0.2.5
+
 devDependencies:
   '@anatine/esbuild-decorators':
     specifier: ^0.2.19
@@ -13,12 +16,18 @@ devDependencies:
   '@daotl/rome-config':
     specifier: 0.0.1-alpha.4
     version: 0.0.1-alpha.4(rome@12.1.3)
-  '@daotl/tsconfig':
-    specifier: ^0.1.2
-    version: 0.1.2
   '@swc/core':
     specifier: ^1.3.62
     version: 1.3.62
+  '@tsconfig/esm':
+    specifier: ^1.0.3
+    version: 1.0.3
+  '@tsconfig/node20':
+    specifier: ^1.0.1
+    version: 1.0.1
+  '@tsconfig/strictest':
+    specifier: ^2.0.1
+    version: 2.0.1
   '@types/jest':
     specifier: 29.5.2
     version: 29.5.2
@@ -587,10 +596,6 @@ packages:
       deepmerge: 4.3.1
       json-stable-stringify: 1.0.2
       rome: 12.1.3
-    dev: true
-
-  /@daotl/tsconfig@0.1.2:
-    resolution: {integrity: sha512-A304YsVVpfdqH6lUPo3Yd7TR5egfVevbZcbWNe/336aSxvxFqMC+3QqUIH4cqRmwjqOR2hHsTqYZH/SRhuUdjQ==}
     dev: true
 
   /@esbuild/android-arm64@0.17.14:
@@ -1460,6 +1465,10 @@ packages:
       '@swc/core-win32-x64-msvc': 1.3.62
     dev: true
 
+  /@tsconfig/esm@1.0.3:
+    resolution: {integrity: sha512-Gp56rIc3R8ab032nXMUitmc7YIb4nAi8DQ6Qt47tuL0Ssn9LIOm+o2FQmqPu3jX4z0TsqgzWwkmVygxcq+yHYg==}
+    dev: true
+
   /@tsconfig/node10@1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==}
     dev: true
@@ -1474,6 +1483,14 @@ packages:
 
   /@tsconfig/node16@1.0.3:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
+    dev: true
+
+  /@tsconfig/node20@1.0.1:
+    resolution: {integrity: sha512-ovd+Yu8j7zgVXA3jRfLRXGknScbVwg9p+R9k4/0EVJzymxokkyoib2Hjt1A2hGK5qehqBIwV8NYvUF/rG+2+wQ==}
+    dev: true
+
+  /@tsconfig/strictest@2.0.1:
+    resolution: {integrity: sha512-7JHHCbyCsGUxLd0pDbp24yz3zjxw2t673W5oAP6HCEdr/UUhaRhYd3SSnUsGCk+VnPVJVA4mXROzbhI+nyIk+w==}
     dev: true
 
   /@types/babel__core@7.1.19:
@@ -1793,7 +1810,7 @@ packages:
       esbuild: '>=0.17'
     dependencies:
       esbuild: 0.17.14
-      load-tsconfig: 0.2.3
+      load-tsconfig: 0.2.5
     dev: true
 
   /cac@6.7.12:
@@ -3164,8 +3181,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /load-tsconfig@0.2.3:
-    resolution: {integrity: sha512-iyT2MXws+dc2Wi6o3grCFtGXpeMvHmJqS27sMPGtV2eUu4PeFnG+33I8BlFK1t1NWMjOpcx9bridn5yxLDX2gQ==}
+  /load-tsconfig@0.2.5:
+    resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 

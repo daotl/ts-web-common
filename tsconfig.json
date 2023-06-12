@@ -1,10 +1,17 @@
 {
-  "extends": "@daotl/tsconfig/node.json",
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node20/tsconfig.json",
+    "@tsconfig/esm/tsconfig.json"
+  ],
   "compilerOptions": {
+    "incremental": true,
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": [
+        "src/*"
+      ]
     }
   }
 }
