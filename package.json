@@ -1,6 +1,6 @@
 {
   "name": "@daotl/ts-lib-starter",
-  "version": "0.3.0",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@8.6.0",
@@ -19,14 +19,23 @@
     "TypeScript",
     "library"
   ],
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.cjs",
+        "types": "./dist/index.d.cts"
+      }
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/**/*.ts",
+    "build": "tsup src/**/*.ts && gcp ./dist/**/*.d.ts {p}{n}.cts",
     "test": "jest",
     "lint": "rome format . && rome check .",
     "lint:fix": "rome format --write . && rome check --apply .",
@@ -48,6 +57,7 @@
     "@types/jest": "29.5.2",
     "@types/node": "^20.3.0",
     "esbuild": "^0.18.1",
+    "glops": "^0.0.4",
     "jest": "^29.5.0",
     "lefthook": "^1.4.1",
     "pnpm": "^8.6.2",

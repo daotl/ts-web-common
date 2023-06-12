@@ -37,6 +37,9 @@ devDependencies:
   esbuild:
     specifier: ^0.18.1
     version: 0.18.1
+  glops:
+    specifier: ^0.0.4
+    version: 0.0.4
   jest:
     specifier: ^29.5.0
     version: 29.5.0(@types/node@20.3.0)(ts-node@10.9.1)
@@ -2243,6 +2246,17 @@ packages:
       micromatch: 4.0.5
     dev: true
 
+  /fast-glob@3.2.12:
+    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: true
+
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: true
@@ -2390,6 +2404,13 @@ packages:
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 3.0.0
+    dev: true
+
+  /glops@0.0.4:
+    resolution: {integrity: sha512-HdVY1e1X/F+pqhgymt+Q054E5eIp3CiR3a8c83OU9nCkZzOIAie5HpZ1eu2jjK+xm6tiiILPB6fteqOfEs3AbQ==}
+    hasBin: true
+    dependencies:
+      fast-glob: 3.2.12
     dev: true
 
   /graceful-fs@4.2.10:
