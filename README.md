@@ -4,36 +4,39 @@ TypeScript Library Starter for DAOT projects
 
 ## Usage
 
-Modify [package.json]().
+Install dependencies:
+```sh
+pnpm install
+```
 
 Commit changes with [Commitizen](https://commitizen.github.io/cz-cli/):
-```shell
+```sh
 npx cz
 ```
 
 Or still use `git commit` and follow [the Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/#summary), your commits will be linted before accepted.
 
 To run `Jest` test:
-```shell
-npm run test
+```sh
+pnpm test
 ```
 
-To lint with `ESLint`:
-```shell
-npm run lint
+To lint with `Rome`:
+```sh
+pnpm lint
 ```
 
 To build with `tsup`:
-```shell
-npm run build
+```sh
+pnpm build
 ```
 
 To publish to npm:
-```shell
-npm run pub
+```sh
+pnpm pub
 ```
 
 To debug with `ts-node`:
-```shell
-ts-node -r tsconfig-paths/register src/index.ts
+```sh
+ts-node-esm -r tsconfig-paths/register src/index.ts
 ```

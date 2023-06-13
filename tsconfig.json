@@ -1,17 +1,33 @@
 {
   "extends": [
     "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/esm/tsconfig.json",
     "@tsconfig/node20/tsconfig.json",
-    "@tsconfig/esm/tsconfig.json"
   ],
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "baseUrl": ".",
     "paths": {
       "~/*": [
         "src/*"
       ]
-    }
-  }
+    },
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    "newLine": "lf"
+  },
+  "reflection": true,
+  "include": [
+    "src/**/*"
+  ]
 }
