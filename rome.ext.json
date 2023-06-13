@@ -1,14 +1,9 @@
 {
   "$schema": "./node_modules/rome/configuration_schema.json",
   "files": {
-    "ignore": [
-      "**/*.json",
-      "./dist"
-    ]
+    "ignore": ["**/*.json", "./dist"]
   },
   "javascript": {
-    "globals": [
-      "ErrorOptions"
-    ]
+    "globals": ["ErrorOptions"]
   }
 }

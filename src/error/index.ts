@@ -309,6 +309,7 @@ export const Errors = {
   ServerBusy: ErrServerBusy,
 } as const
 
+// rome-ignore lint/suspicious/noRedeclare: correct
 export namespace Errors {
   export type BadRequest = ErrBadRequest
   export type BadArgument = ErrBadArgument
