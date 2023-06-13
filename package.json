@@ -44,7 +44,7 @@
     }
   },
   "scripts": {
-    "build": "tsup src/**/*.ts && tsc-alias && gcp ./dist/**/*.d.ts {p}{n}.cts",
+    "build": "tsup src/**/*.ts && tsc-alias && gcp './dist/**/*.d.ts' {p}{n}.cts",
     "test": "jest",
     "lint": "rome format . && rome check .",
     "lint:fix": "rome format --write . && rome check --apply .",
