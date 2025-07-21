@@ -8,14 +8,11 @@
     "incremental": true,
     "tsBuildInfoFile": "./tsconfig.tsbuildinfo",
     "sourceMap": true,
-    "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"],
     },
     "allowJs": true,
     "resolveJsonModule": true,
@@ -25,10 +22,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": true,
-    "newLine": "lf"
+    "newLine": "lf",
   },
   "reflection": true,
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"],
 }

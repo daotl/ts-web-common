@@ -1,6 +1,7 @@
+'use strict'
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  ignores: [(message) => message.startsWith('WIP: ')],
+  ignores: [message => message.startsWith('WIP: ')],
   rules: {
     'type-case': [0],
     'type-enum': [
